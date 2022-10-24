@@ -1,14 +1,4 @@
 --[[
-    This file (noclip.lua) is created by @Dezel.
-    Created the 13/04/2022 - 21:20.
-    Directory : dezel/modules/addons/admin/client.
-    
-    This file is Protected by Dezel : 
-    Edit, Modifyng or Copy code of this 
-    file is completly forbade.
-]]--
-
---[[
   * Created by MiiMii1205
   * license MIT
 --]]

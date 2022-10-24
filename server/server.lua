@@ -1,15 +1,3 @@
---[[
-    This file (server.lua) is created by @Dezel.
-    Created the 13/04/2022 - 10:39.
-    Directory : dezel/modules/addons/admin/server.
-    
-    This file is Protected by Dezel : 
-    Edit, Modifyng or Copy code of this 
-    file is completly forbade.
-]]--
-
-print("[^5DBase^7] (^1INFO^7) (^2SERVER^7) Admin Loaded!")
-
 ESX = nil TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 items = {}

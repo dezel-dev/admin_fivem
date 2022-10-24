@@ -1,13 +1,3 @@
---[[
-    This file (function.lua) is created by @Dezel.
-    Created the 18/05/2022 - 12:14.
-    Directory : resources/[Dezel]/dezel_admin/shared.
-    
-    This file is Protected by Dezel : 
-    Edit, Modifyng or Copy code of this 
-    file is completly forbade.
-]]--
-
 function getRankDisplay(rank)
     local ranks = {
         ["_dev"] = "~r~[Dev] ~s~",
