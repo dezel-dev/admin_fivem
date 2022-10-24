@@ -1,7 +1,7 @@
 ESX = nil
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
-isAdminMode, admin, item, playerCount, vehicleCount, reportCount, Items = false, {}, {}, 0, 0, 0, {}
+isAdminMode, admin, item, playerCount, vehicleCount, Items = false, {}, {}, 0, 0, 0, {}
 filterArray = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" }
 
 RegisterNetEvent('admin:getAdminData:return')
@@ -72,7 +72,6 @@ adminMenu = function ()
                 end,
 
                 onChecked = function()
-                    TriggerServerEvent('admin:getReport')
                     isAdminMode = true
                     vehicleCount = 0
                     for i = 1, #GetVehicles(), 1 do
@@ -97,8 +96,6 @@ adminMenu = function ()
                 }, players)
                 RageUI.Button(('Gestions véhicules (~r~%s~s~)'):format(#GetVehicles()), 'Gestion des véhicules', {RightLabel = "~h~>"}, true, {
                 }, vehicles)
-                RageUI.Button(('Gestion report (~r~%s~s~)'):format(reportCount), 'Gestion des reports', {RightLabel = "~h~>"}, true, {
-                }, report)
 
             end
 
@@ -722,15 +719,5 @@ Keys.Register('F10', 'F10', 'Ouvrir le menu Admin', function()
     TriggerServerEvent('admin:getAdminData')
     Wait(75)
     adminMenu()
-end)
-
-RegisterCommand('reportadmin', function(source, args, rawCommand)
-    reason = table.concat(args, ' ')
-    if reason == nil then
-        ESX.ShowNotification('~r~Vous devez entrer un motif')
-    else
-        TriggerServerEvent('admin:addReport', reason)
-        ESX.ShowNotification('~g~Votre report a bien été envoyé')
-    end
 end)
 
