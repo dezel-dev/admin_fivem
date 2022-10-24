@@ -710,7 +710,6 @@ adminMenu = function ()
 end
 
 Keys.Register('F10', 'F10', 'Ouvrir le menu Admin', function()
-    print('ok')
     vehicleCount = 0
     playerCount = 0
     for i = 1, #GetVehicles(), 1 do
