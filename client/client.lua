@@ -87,7 +87,7 @@ adminMenu = function ()
 
             RageUI.Separator('Rang: ~r~' .. admin.group)
 
-            RageUILine()
+            RageUI.Line()
 
             if isAdminMode then
 
@@ -110,7 +110,7 @@ adminMenu = function ()
 
             RageUI.Separator('Rang: ~r~' .. admin.group)
 
-            RageUILine()
+            RageUI.Line()
 
             RageUI.Separator(('ID : %s | Pseudo : %s'):format(idPlayer, admin.name))
             RageUI.Checkbox('Noclip', '~g~Activer~s~/~r~Désactiver~s~ le noclip', index.isNoclip, {}, {
@@ -174,7 +174,7 @@ adminMenu = function ()
                 end
             })
 
-            RageUILine()
+            RageUI.Line()
 
             RageUI.Button('TP Marker', 'TP sur le marker', {}, true, {
                 onSelected = function()
@@ -211,7 +211,7 @@ adminMenu = function ()
                 end
             })
 
-            RageUILine()
+            RageUI.Line()
 
             RageUI.Button('Give Vehicle', 'Vous donnez un véhicule', {RightLabel = "~h~>"}, true, {
                 onSelected = function()
@@ -277,7 +277,7 @@ adminMenu = function ()
                 end
             })
 
-            RageUILine()
+            RageUI.Line()
 
             RageUI.Button('Set Job', 'Vous donnez un job', {RightLabel = "~h~>"}, true, {
                 onSelected = function()
@@ -305,7 +305,7 @@ adminMenu = function ()
                 end,
             })
 
-            RageUILine()
+            RageUI.Line()
 
             for id, itemInfos in pairs(item) do
                 if starts(itemInfos.label:lower(), filterArray[index.filter]:lower()) then
@@ -334,7 +334,7 @@ adminMenu = function ()
                 end,
             })
 
-            RageUILine()
+            RageUI.Line()
 
             for id, itemInfos in pairs(item) do
                 if starts(itemInfos.label:lower(), filterArray[index.filter]:lower()) then
@@ -359,7 +359,7 @@ adminMenu = function ()
         RageUI.IsVisible(players, function()
             RageUI.Separator('Rang: ~r~' .. admin.group)
 
-            RageUILine()
+            RageUI.Line()
 
             for _, playerId in ipairs(GetActivePlayers()) do
                 name = GetPlayerName(playerId)
@@ -381,11 +381,11 @@ adminMenu = function ()
 
             RageUI.Separator('Rang: ~r~' .. admin.group)
 
-            RageUILine()
+            RageUI.Line()
 
             RageUI.Separator(('ID : %s | Joueur : %s'):format(idToGive, name))
 
-            RageUILine()
+            RageUI.Line()
 
             RageUI.Button('TP sur moi', nil, {RightLabel = "~h~>"}, true, {
                 onSelected = function()
@@ -410,7 +410,7 @@ adminMenu = function ()
                 end
             })
 
-            RageUILine()
+            RageUI.Line()
 
             RageUI.Checkbox('Godmode', '~g~Activer~s~/~r~Désactiver~s~ le godmode', index2.isGodMode, {}, {
                 onSelected = function(Index)
@@ -443,7 +443,7 @@ adminMenu = function ()
                 end
             })
 
-            RageUILine()
+            RageUI.Line()
 
             RageUI.Button('Revive', 'Revive le joueur', {RightLabel = "~h~>"}, true, {
                 onSelected = function()
@@ -467,7 +467,7 @@ adminMenu = function ()
                 end
             })
 
-            RageUILine()
+            RageUI.Line()
 
             RageUI.Button('Give Vehicle', 'Vous donnez un véhicule', {RightLabel = "~h~>"}, true, {
                 onSelected = function()
@@ -542,7 +542,7 @@ adminMenu = function ()
                 end
             })
 
-            RageUILine()
+            RageUI.Line()
 
             RageUI.Button('Set Job', 'Vous donnez un job', {RightLabel = "~h~>"}, true, {
                 onSelected = function()
@@ -562,7 +562,7 @@ adminMenu = function ()
                 end
             })
 
-            RageUILine()
+            RageUI.Line()
 
             RageUI.Button("Voir l'inventaire", "Voir l'inventaire du joueur", {RightLabel = "~h~>"}, true, {
                 onSelected = function()
@@ -570,7 +570,7 @@ adminMenu = function ()
                 end
             }, inventory)
 
-            RageUILine()
+            RageUI.Line()
 
             RageUI.Button('Kick', 'Kick ce joueur', {RightLabel = "~h~>"}, true, {
                 onSelected = function()
@@ -595,7 +595,7 @@ adminMenu = function ()
 
             RageUI.Separator('Rang: ~r~' .. admin.group)
 
-            RageUILine()
+            RageUI.Line()
 
             for _, v in pairs(Items) do
                 RageUI.Button(('[x~r~%s~s~] %s'):format(v.amount, v.label), '', {}, true, {
@@ -620,7 +620,7 @@ adminMenu = function ()
             end
             RageUI.Separator('Rang: ~r~' .. admin.group)
 
-            RageUILine()
+            RageUI.Line()
 
             RageUI.Button('Spawn Vehicle', 'Vous donnez un véhicule', {RightLabel = "~h~>"}, true, {
                 onSelected = function()
@@ -672,7 +672,7 @@ adminMenu = function ()
                 end
             })
 
-            RageUILine()
+            RageUI.Line()
 
             RageUI.Button('Supprimer le véhicule', 'Supprimez le véhicule', {RightLabel = "~h~>"}, true, {
                 onSelected = function()
